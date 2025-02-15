@@ -1,7 +1,12 @@
-# demo_spacestation_gnc_rep README.md
+# README.md
 
+## Purpose of this demo
+- To show an example of how to organize space station modules to create your space station model in the SDF format 
+- To demo to convert from SDF to URDF for ROS 2 use.
+- 
 ## File organization
 
+```plaintext
 demo_spacestation_gnc_rep/
 ├── CMakeLists.txt
 ├── package.xml
@@ -22,6 +27,7 @@ demo_spacestation_gnc_rep/
 │   └── spacestation.urdf
 └── rviz/
     └── spacestation.rviz
+```
 
 (Note) 
 The URDF files in this directory are intended to be generated from SDF files 
@@ -74,7 +80,7 @@ A rviz window will be launched.
 - It would be preferable if there is a pre-developed generation method to conbine sub-modules (spacestation_module_typeX.urdf) and conficulation sdf file (spacestation.sdf) to generate spacestation.urdf.  
 
 ## TODO
-- Support the sensors
+- Support sensors
 
 
 
