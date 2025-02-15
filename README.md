@@ -82,5 +82,12 @@ A rviz window will be launched.
 ## TODO
 - Support sensors
 
+## Visual presentation 
+Note: 
 
+"1)" in the image corresponses to Step2 in Procedures.
+
+"2)" in the image corresponses to Step3 in Procedures.
+
+![A visual presentation](sdf2urdf.png)
 
