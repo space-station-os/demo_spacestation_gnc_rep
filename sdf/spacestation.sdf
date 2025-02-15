@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="spacestation">
+    <include>
+      <uri>model://spacestation_module_typeA</uri>
+      <name>Eagle</name>
+      <material>
+        <color>1 0 0 1</color>  <!-- Red? -->
+      </material>
+    </include>
+    <include>
+      <uri>model://spacestation_module_typeB</uri>
+      <name>Tiger</name>
+      <material>
+        <color>0 1 0 1</color>  <!-- Green? -->
+      </material>
+    </include>
+    <include>
+      <uri>model://spacestation_module_typeB</uri>
+      <name>Panther</name>
+      <material>
+        <color>0 0 1 1</color>  <!-- Blue? -->
+      </material>
+    </include>
+    <joint name="eagle_tiger_joint" type="fixed">
+      <parent>Eagle::docking_port_y_positive</parent>
+      <child>Tiger::base_link</child>
+      <pose>4.0 0 0 0 0 0</pose>
+    </joint>
+    <joint name="eagle_panther_joint" type="fixed">
+      <parent>Eagle::docking_port_y_negative</parent>
+      <child>Panther::base_link</child>
+      <pose>4.0 0 0 0 0 0</pose>
+    </joint>
+  </model>
+</sdf>

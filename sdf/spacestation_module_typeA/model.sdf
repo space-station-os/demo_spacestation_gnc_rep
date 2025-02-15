@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="spacestation_module_typeA">
+    <link name="base_link">
+      <inertial>
+        <mass>12000.0</mass>
+        <inertia>
+          <ixx>1200.0</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>300.0</iyy>
+          <iyz>0.0</iyz>
+          <izz>300.0</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <!--pose>-6 0 0 0 0 0</pose--> 
+        <geometry>
+          <cylinder>
+            <radius>2.5</radius>
+            <length>12.0</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>2.5</radius>
+            <length>12.0</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- Definition of thruster links -->
+    <link name="thruster_x_positive_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="thruster_x_positive_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="thruster_x_negative_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="thruster_x_negative_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="thruster_y_positive_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="thruster_y_positive_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="thruster_y_negative_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="thruster_y_negative_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="thruster_z_positive_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="thruster_z_positive_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="thruster_z_negative_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="thruster_z_negative_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+
+    <!-- Definition of joints and actuators for thrusters -->
+    <joint name="thruster_x_positive_joint_1" type="fixed">
+      <parent>base_link</parent>
+      <child>thruster_x_positive_1</child>
+      <pose>-5.7 2.7 0 0 0 0</pose>
+    </joint>
+    <joint name="thruster_x_positive_joint_2" type="fixed">
+      <parent>base_link</parent>
+      <child>thruster_x_positive_2</child>
+      <pose>-5.7 -2.7 0 0 0 0</pose>
+    </joint>
+    <joint name="thruster_x_negative_joint_1" type="fixed">
+      <parent>base_link</parent>
+      <child>thruster_x_negative_1</child>
+      <pose>5.7 2.7 0 0 0 3.1459</pose>
+    </joint>
+    <joint name="thruster_x_negative_joint_2" type="fixed">
+      <parent>base_link</parent>
+      <child>thruster_x_negative_2</child>
+      <pose>5.7 -2.7 0 0 0 3.1459</pose>
+    </joint>
+    <joint name="thruster_y_positive_joint_1" type="fixed">
+      <parent>base_link</parent>
+      <child>thruster_y_positive_1</child>
+      <pose>0 0.3 2.6 0 0 1.5708</pose>
+    </joint>
+    <joint name="thruster_y_positive_joint_2" type="fixed">
+      <parent>base_link</parent>
+      <child>thruster_y_positive_2</child>
+      <pose>0 -0.3 2.6 0 0 1.5708</pose>
+    </joint>
+    <joint name="thruster_y_negative_joint_1" type="fixed">
+      <parent>base_link</parent>
+      <child>thruster_y_negative_1</child>
+      <pose>0 0.3 -2.6 0 0 -1.5708</pose>
+    </joint>
+    <joint name="thruster_y_negative_joint_2" type="fixed">
+      <parent>base_link</parent>
+      <child>thruster_y_negative_2</child>
+      <pose>0 -0.3 -2.6 0 0 -1.5708</pose>
+    </joint>
+    <joint name="thruster_z_positive_joint_1" type="fixed">
+      <parent>base_link</parent>
+      <child>thruster_z_positive_1</child>
+      <pose>5.8 0 2.7 0 1.5708 0</pose>
+    </joint>
+    <joint name="thruster_z_positive_joint_2" type="fixed">
+      <parent>base_link</parent>
+      <child>thruster_z_positive_2</child>
+      <pose>-5.8 0 2.7 0 1.5708 0</pose>
+    </joint>
+    <joint name="thruster_z_negative_joint_1" type="fixed">
+      <parent>base_link</parent>
+      <child>thruster_z_negative_1</child>
+      <pose>5.8 0 -2.7 0 -1.5708 0</pose>
+    </joint>
+    <joint name="thruster_z_negative_joint_2" type="fixed">
+      <parent>base_link</parent>
+      <child>thruster_z_negative_2</child>
+      <pose>-5.8 0 -2.7 0 -1.5708 0</pose>
+    </joint>
+
+    <!-- Actuator definition -->
+    <actuator>
+      <thruster>
+        <force>30.0</force>
+      </thruster>
+    </actuator>
+
+    <!-- Definition of docking ports -->
+    <link name="docking_port_x_positive">
+      <collision name="collision_docking_port_x_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual_docking_port_x_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <link name="docking_port_y_positive">
+      <collision name="collision_docking_port_y_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual_docking_port_y_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <link name="docking_port_y_negative">
+      <collision name="collision_docking_port_y_negative">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual_docking_port_y_negative">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="docking_port_x_positive_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>docking_port_x_positive</child>
+      <pose>6.5 0 0 0 0 0</pose>
+    </joint>
+    <joint name="docking_port_y_positive_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>docking_port_y_positive</child>
+      <pose>0 2.5 0 0 0 1.5708</pose>
+    </joint>
+    <joint name="docking_port_y_negative_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>docking_port_y_negative</child>
+      <pose>0 -2.5 0 0 0 -1.5708</pose>
+    </joint>
+  </model>
+</sdf>
+

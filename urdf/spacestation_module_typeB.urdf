@@ -1,0 +1,235 @@
+<?xml version="1.0" ?>
+<robot name="spacestation_module_typeB">
+	<link name="base_link">
+		<inertial>
+			<mass value="8000.0"/>
+			<inertia ixx="800.0" ixy="0.0" ixz="0.0" iyy="300.0" iyz="0.0" izz="300.0"/>
+		</inertial>
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="2.5" length="8.0"/>
+			</geometry>
+		</collision>
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="2.5" length="8.0"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="thruster_x_positive_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="thruster_x_positive_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="thruster_x_negative_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="thruster_x_negative_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="thruster_y_positive_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="thruster_y_positive_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="thruster_y_negative_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="thruster_y_negative_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="thruster_z_positive_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="thruster_z_positive_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="thruster_z_negative_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="thruster_z_negative_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="thruster_x_positive_joint_1" type="fixed">
+		<parent link="base_link"/>
+		<child link="thruster_x_positive_1"/>
+		<origin rpy="0 0 0" xyz="-3.7 2.6 0"/>
+	</joint>
+	<joint name="thruster_x_positive_joint_2" type="fixed">
+		<parent link="base_link"/>
+		<child link="thruster_x_positive_2"/>
+		<origin rpy="0 0 0" xyz="-3.7 -2.6 0"/>
+	</joint>
+	<joint name="thruster_x_negative_joint_1" type="fixed">
+		<parent link="base_link"/>
+		<child link="thruster_x_negative_1"/>
+		<origin rpy="0 0 3.1459" xyz="3.7 2.6 0"/>
+	</joint>
+	<joint name="thruster_x_negative_joint_2" type="fixed">
+		<parent link="base_link"/>
+		<child link="thruster_x_negative_2"/>
+		<origin rpy="0 0 3.1459" xyz="3.7 -2.6 0"/>
+	</joint>
+	<joint name="thruster_y_positive_joint_1" type="fixed">
+		<parent link="base_link"/>
+		<child link="thruster_y_positive_1"/>
+		<origin rpy="0 0 1.5708" xyz="0 0.3 2.6"/>
+	</joint>
+	<joint name="thruster_y_positive_joint_2" type="fixed">
+		<parent link="base_link"/>
+		<child link="thruster_y_positive_2"/>
+		<origin rpy="0 0 1.5708" xyz="0 -0.3 2.6"/>
+	</joint>
+	<joint name="thruster_y_negative_joint_1" type="fixed">
+		<parent link="base_link"/>
+		<child link="thruster_y_negative_1"/>
+		<origin rpy="0 0 -1.5708" xyz="0 0.3 -2.6"/>
+	</joint>
+	<joint name="thruster_y_negative_joint_2" type="fixed">
+		<parent link="base_link"/>
+		<child link="thruster_y_negative_2"/>
+		<origin rpy="0 0 -1.5708" xyz="0 -0.3 -2.6"/>
+	</joint>
+	<joint name="thruster_z_positive_joint_1" type="fixed">
+		<parent link="base_link"/>
+		<child link="thruster_z_positive_1"/>
+		<origin rpy="0 1.5708 0" xyz="3.8 0 2.7"/>
+	</joint>
+	<joint name="thruster_z_positive_joint_2" type="fixed">
+		<parent link="base_link"/>
+		<child link="thruster_z_positive_2"/>
+		<origin rpy="0 1.5708 0" xyz="-3.8 0 2.7"/>
+	</joint>
+	<joint name="thruster_z_negative_joint_1" type="fixed">
+		<parent link="base_link"/>
+		<child link="thruster_z_negative_1"/>
+		<origin rpy="0 -1.5708 0" xyz="3.8 0 -2.7"/>
+	</joint>
+	<joint name="thruster_z_negative_joint_2" type="fixed">
+		<parent link="base_link"/>
+		<child link="thruster_z_negative_2"/>
+		<origin rpy="0 -1.5708 0" xyz="-3.8 0 -2.7"/>
+	</joint>
+	<link name="docking_port_x_positive">
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</collision>
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="docking_port_y_positive">
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</collision>
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="docking_port_y_negative">
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</collision>
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="docking_port_x_positive_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="docking_port_x_positive"/>
+		<origin rpy="0 0 0" xyz="4.5 0 0"/>
+	</joint>
+	<joint name="docking_port_y_positive_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="docking_port_y_positive"/>
+		<origin rpy="0 0 1.5708" xyz="0 2.5 0"/>
+	</joint>
+	<joint name="docking_port_y_negative_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="docking_port_y_negative"/>
+		<origin rpy="0 0 -1.5708" xyz="0 -2.5 0"/>
+	</joint>
+</robot>
+

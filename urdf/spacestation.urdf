@@ -1,0 +1,709 @@
+<?xml version="1.0"?>
+<robot name="spacestation">
+Eagle">
+	<link name="Eagle_base_link">
+		<inertial>
+			<mass value="12000.0"/>
+			<inertia ixx="1200.0" ixy="0.0" ixz="0.0" iyy="300.0" iyz="0.0" izz="300.0"/>
+		</inertial>
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="2.5" length="12.0"/>
+			</geometry>
+		</collision>
+		<visual><material name="Eagle_color"><color rgba="1 0 0 1"/></material>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="2.5" length="12.0"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Eagle_thruster_x_positive_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Eagle_thruster_x_positive_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Eagle_thruster_x_negative_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Eagle_thruster_x_negative_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Eagle_thruster_y_positive_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Eagle_thruster_y_positive_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Eagle_thruster_y_negative_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Eagle_thruster_y_negative_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Eagle_thruster_z_positive_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Eagle_thruster_z_positive_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Eagle_thruster_z_negative_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Eagle_thruster_z_negative_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="Eagle_thruster_x_positive_joint_1" type="fixed">
+		<parent link="Eagle_base_link"/>
+		<child link="Eagle_thruster_x_positive_1"/>
+		<origin rpy="0 0 0" xyz="-5.7 2.7 0"/>
+	</joint>
+	<joint name="Eagle_thruster_x_positive_joint_2" type="fixed">
+		<parent link="Eagle_base_link"/>
+		<child link="Eagle_thruster_x_positive_2"/>
+		<origin rpy="0 0 0" xyz="-5.7 -2.7 0"/>
+	</joint>
+	<joint name="Eagle_thruster_x_negative_joint_1" type="fixed">
+		<parent link="Eagle_base_link"/>
+		<child link="Eagle_thruster_x_negative_1"/>
+		<origin rpy="0 0 3.1459" xyz="5.7 2.7 0"/>
+	</joint>
+	<joint name="Eagle_thruster_x_negative_joint_2" type="fixed">
+		<parent link="Eagle_base_link"/>
+		<child link="Eagle_thruster_x_negative_2"/>
+		<origin rpy="0 0 3.1459" xyz="5.7 -2.7 0"/>
+	</joint>
+	<joint name="Eagle_thruster_y_positive_joint_1" type="fixed">
+		<parent link="Eagle_base_link"/>
+		<child link="Eagle_thruster_y_positive_1"/>
+		<origin rpy="0 0 1.5708" xyz="0 0.3 2.6"/>
+	</joint>
+	<joint name="Eagle_thruster_y_positive_joint_2" type="fixed">
+		<parent link="Eagle_base_link"/>
+		<child link="Eagle_thruster_y_positive_2"/>
+		<origin rpy="0 0 1.5708" xyz="0 -0.3 2.6"/>
+	</joint>
+	<joint name="Eagle_thruster_y_negative_joint_1" type="fixed">
+		<parent link="Eagle_base_link"/>
+		<child link="Eagle_thruster_y_negative_1"/>
+		<origin rpy="0 0 -1.5708" xyz="0 0.3 -2.6"/>
+	</joint>
+	<joint name="Eagle_thruster_y_negative_joint_2" type="fixed">
+		<parent link="Eagle_base_link"/>
+		<child link="Eagle_thruster_y_negative_2"/>
+		<origin rpy="0 0 -1.5708" xyz="0 -0.3 -2.6"/>
+	</joint>
+	<joint name="Eagle_thruster_z_positive_joint_1" type="fixed">
+		<parent link="Eagle_base_link"/>
+		<child link="Eagle_thruster_z_positive_1"/>
+		<origin rpy="0 1.5708 0" xyz="5.8 0 2.7"/>
+	</joint>
+	<joint name="Eagle_thruster_z_positive_joint_2" type="fixed">
+		<parent link="Eagle_base_link"/>
+		<child link="Eagle_thruster_z_positive_2"/>
+		<origin rpy="0 1.5708 0" xyz="-5.8 0 2.7"/>
+	</joint>
+	<joint name="Eagle_thruster_z_negative_joint_1" type="fixed">
+		<parent link="Eagle_base_link"/>
+		<child link="Eagle_thruster_z_negative_1"/>
+		<origin rpy="0 -1.5708 0" xyz="5.8 0 -2.7"/>
+	</joint>
+	<joint name="Eagle_thruster_z_negative_joint_2" type="fixed">
+		<parent link="Eagle_base_link"/>
+		<child link="Eagle_thruster_z_negative_2"/>
+		<origin rpy="0 -1.5708 0" xyz="-5.8 0 -2.7"/>
+	</joint>
+	<link name="Eagle_docking_port_x_positive">
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</collision>
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Eagle_docking_port_y_positive">
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</collision>
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Eagle_docking_port_y_negative">
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</collision>
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="Eagle_docking_port_x_positive_joint" type="fixed">
+		<parent link="Eagle_base_link"/>
+		<child link="Eagle_docking_port_x_positive"/>
+		<origin rpy="0 0 0" xyz="6.5 0 0"/>
+	</joint>
+	<joint name="Eagle_docking_port_y_positive_joint" type="fixed">
+		<parent link="Eagle_base_link"/>
+		<child link="Eagle_docking_port_y_positive"/>
+		<origin rpy="0 0 1.5708" xyz="0 2.5 0"/>
+	</joint>
+	<joint name="Eagle_docking_port_y_negative_joint" type="fixed">
+		<parent link="Eagle_base_link"/>
+		<child link="Eagle_docking_port_y_negative"/>
+		<origin rpy="0 0 -1.5708" xyz="0 -2.5 0"/>
+	</joint>
+Tiger">
+	<link name="Tiger_base_link">
+		<inertial>
+			<mass value="8000.0"/>
+			<inertia ixx="800.0" ixy="0.0" ixz="0.0" iyy="300.0" iyz="0.0" izz="300.0"/>
+		</inertial>
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="2.5" length="8.0"/>
+			</geometry>
+		</collision>
+		<visual><material name="Tiger_color"><color rgba="0 1 0 1"/></material>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="2.5" length="8.0"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Tiger_thruster_x_positive_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Tiger_thruster_x_positive_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Tiger_thruster_x_negative_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Tiger_thruster_x_negative_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Tiger_thruster_y_positive_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Tiger_thruster_y_positive_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Tiger_thruster_y_negative_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Tiger_thruster_y_negative_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Tiger_thruster_z_positive_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Tiger_thruster_z_positive_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Tiger_thruster_z_negative_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Tiger_thruster_z_negative_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="Tiger_thruster_x_positive_joint_1" type="fixed">
+		<parent link="Tiger_base_link"/>
+		<child link="Tiger_thruster_x_positive_1"/>
+		<origin rpy="0 0 0" xyz="-3.7 2.6 0"/>
+	</joint>
+	<joint name="Tiger_thruster_x_positive_joint_2" type="fixed">
+		<parent link="Tiger_base_link"/>
+		<child link="Tiger_thruster_x_positive_2"/>
+		<origin rpy="0 0 0" xyz="-3.7 -2.6 0"/>
+	</joint>
+	<joint name="Tiger_thruster_x_negative_joint_1" type="fixed">
+		<parent link="Tiger_base_link"/>
+		<child link="Tiger_thruster_x_negative_1"/>
+		<origin rpy="0 0 3.1459" xyz="3.7 2.6 0"/>
+	</joint>
+	<joint name="Tiger_thruster_x_negative_joint_2" type="fixed">
+		<parent link="Tiger_base_link"/>
+		<child link="Tiger_thruster_x_negative_2"/>
+		<origin rpy="0 0 3.1459" xyz="3.7 -2.6 0"/>
+	</joint>
+	<joint name="Tiger_thruster_y_positive_joint_1" type="fixed">
+		<parent link="Tiger_base_link"/>
+		<child link="Tiger_thruster_y_positive_1"/>
+		<origin rpy="0 0 1.5708" xyz="0 0.3 2.6"/>
+	</joint>
+	<joint name="Tiger_thruster_y_positive_joint_2" type="fixed">
+		<parent link="Tiger_base_link"/>
+		<child link="Tiger_thruster_y_positive_2"/>
+		<origin rpy="0 0 1.5708" xyz="0 -0.3 2.6"/>
+	</joint>
+	<joint name="Tiger_thruster_y_negative_joint_1" type="fixed">
+		<parent link="Tiger_base_link"/>
+		<child link="Tiger_thruster_y_negative_1"/>
+		<origin rpy="0 0 -1.5708" xyz="0 0.3 -2.6"/>
+	</joint>
+	<joint name="Tiger_thruster_y_negative_joint_2" type="fixed">
+		<parent link="Tiger_base_link"/>
+		<child link="Tiger_thruster_y_negative_2"/>
+		<origin rpy="0 0 -1.5708" xyz="0 -0.3 -2.6"/>
+	</joint>
+	<joint name="Tiger_thruster_z_positive_joint_1" type="fixed">
+		<parent link="Tiger_base_link"/>
+		<child link="Tiger_thruster_z_positive_1"/>
+		<origin rpy="0 1.5708 0" xyz="3.8 0 2.7"/>
+	</joint>
+	<joint name="Tiger_thruster_z_positive_joint_2" type="fixed">
+		<parent link="Tiger_base_link"/>
+		<child link="Tiger_thruster_z_positive_2"/>
+		<origin rpy="0 1.5708 0" xyz="-3.8 0 2.7"/>
+	</joint>
+	<joint name="Tiger_thruster_z_negative_joint_1" type="fixed">
+		<parent link="Tiger_base_link"/>
+		<child link="Tiger_thruster_z_negative_1"/>
+		<origin rpy="0 -1.5708 0" xyz="3.8 0 -2.7"/>
+	</joint>
+	<joint name="Tiger_thruster_z_negative_joint_2" type="fixed">
+		<parent link="Tiger_base_link"/>
+		<child link="Tiger_thruster_z_negative_2"/>
+		<origin rpy="0 -1.5708 0" xyz="-3.8 0 -2.7"/>
+	</joint>
+	<link name="Tiger_docking_port_x_positive">
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</collision>
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Tiger_docking_port_y_positive">
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</collision>
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Tiger_docking_port_y_negative">
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</collision>
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="Tiger_docking_port_x_positive_joint" type="fixed">
+		<parent link="Tiger_base_link"/>
+		<child link="Tiger_docking_port_x_positive"/>
+		<origin rpy="0 0 0" xyz="4.5 0 0"/>
+	</joint>
+	<joint name="Tiger_docking_port_y_positive_joint" type="fixed">
+		<parent link="Tiger_base_link"/>
+		<child link="Tiger_docking_port_y_positive"/>
+		<origin rpy="0 0 1.5708" xyz="0 2.5 0"/>
+	</joint>
+	<joint name="Tiger_docking_port_y_negative_joint" type="fixed">
+		<parent link="Tiger_base_link"/>
+		<child link="Tiger_docking_port_y_negative"/>
+		<origin rpy="0 0 -1.5708" xyz="0 -2.5 0"/>
+	</joint>
+Panther">
+	<link name="Panther_base_link">
+		<inertial>
+			<mass value="8000.0"/>
+			<inertia ixx="800.0" ixy="0.0" ixz="0.0" iyy="300.0" iyz="0.0" izz="300.0"/>
+		</inertial>
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="2.5" length="8.0"/>
+			</geometry>
+		</collision>
+		<visual><material name="Panther_color"><color rgba="0 0 1 1"/></material>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="2.5" length="8.0"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Panther_thruster_x_positive_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Panther_thruster_x_positive_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Panther_thruster_x_negative_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Panther_thruster_x_negative_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Panther_thruster_y_positive_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Panther_thruster_y_positive_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Panther_thruster_y_negative_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Panther_thruster_y_negative_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Panther_thruster_z_positive_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Panther_thruster_z_positive_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Panther_thruster_z_negative_1">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Panther_thruster_z_negative_2">
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.2" length="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="Panther_thruster_x_positive_joint_1" type="fixed">
+		<parent link="Panther_base_link"/>
+		<child link="Panther_thruster_x_positive_1"/>
+		<origin rpy="0 0 0" xyz="-3.7 2.6 0"/>
+	</joint>
+	<joint name="Panther_thruster_x_positive_joint_2" type="fixed">
+		<parent link="Panther_base_link"/>
+		<child link="Panther_thruster_x_positive_2"/>
+		<origin rpy="0 0 0" xyz="-3.7 -2.6 0"/>
+	</joint>
+	<joint name="Panther_thruster_x_negative_joint_1" type="fixed">
+		<parent link="Panther_base_link"/>
+		<child link="Panther_thruster_x_negative_1"/>
+		<origin rpy="0 0 3.1459" xyz="3.7 2.6 0"/>
+	</joint>
+	<joint name="Panther_thruster_x_negative_joint_2" type="fixed">
+		<parent link="Panther_base_link"/>
+		<child link="Panther_thruster_x_negative_2"/>
+		<origin rpy="0 0 3.1459" xyz="3.7 -2.6 0"/>
+	</joint>
+	<joint name="Panther_thruster_y_positive_joint_1" type="fixed">
+		<parent link="Panther_base_link"/>
+		<child link="Panther_thruster_y_positive_1"/>
+		<origin rpy="0 0 1.5708" xyz="0 0.3 2.6"/>
+	</joint>
+	<joint name="Panther_thruster_y_positive_joint_2" type="fixed">
+		<parent link="Panther_base_link"/>
+		<child link="Panther_thruster_y_positive_2"/>
+		<origin rpy="0 0 1.5708" xyz="0 -0.3 2.6"/>
+	</joint>
+	<joint name="Panther_thruster_y_negative_joint_1" type="fixed">
+		<parent link="Panther_base_link"/>
+		<child link="Panther_thruster_y_negative_1"/>
+		<origin rpy="0 0 -1.5708" xyz="0 0.3 -2.6"/>
+	</joint>
+	<joint name="Panther_thruster_y_negative_joint_2" type="fixed">
+		<parent link="Panther_base_link"/>
+		<child link="Panther_thruster_y_negative_2"/>
+		<origin rpy="0 0 -1.5708" xyz="0 -0.3 -2.6"/>
+	</joint>
+	<joint name="Panther_thruster_z_positive_joint_1" type="fixed">
+		<parent link="Panther_base_link"/>
+		<child link="Panther_thruster_z_positive_1"/>
+		<origin rpy="0 1.5708 0" xyz="3.8 0 2.7"/>
+	</joint>
+	<joint name="Panther_thruster_z_positive_joint_2" type="fixed">
+		<parent link="Panther_base_link"/>
+		<child link="Panther_thruster_z_positive_2"/>
+		<origin rpy="0 1.5708 0" xyz="-3.8 0 2.7"/>
+	</joint>
+	<joint name="Panther_thruster_z_negative_joint_1" type="fixed">
+		<parent link="Panther_base_link"/>
+		<child link="Panther_thruster_z_negative_1"/>
+		<origin rpy="0 -1.5708 0" xyz="3.8 0 -2.7"/>
+	</joint>
+	<joint name="Panther_thruster_z_negative_joint_2" type="fixed">
+		<parent link="Panther_base_link"/>
+		<child link="Panther_thruster_z_negative_2"/>
+		<origin rpy="0 -1.5708 0" xyz="-3.8 0 -2.7"/>
+	</joint>
+	<link name="Panther_docking_port_x_positive">
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</collision>
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Panther_docking_port_y_positive">
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</collision>
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="Panther_docking_port_y_negative">
+		<collision>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</collision>
+		<visual>
+			<origin rpy="0 1.5708 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="1.5" length="0.4"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="Panther_docking_port_x_positive_joint" type="fixed">
+		<parent link="Panther_base_link"/>
+		<child link="Panther_docking_port_x_positive"/>
+		<origin rpy="0 0 0" xyz="4.5 0 0"/>
+	</joint>
+	<joint name="Panther_docking_port_y_positive_joint" type="fixed">
+		<parent link="Panther_base_link"/>
+		<child link="Panther_docking_port_y_positive"/>
+		<origin rpy="0 0 1.5708" xyz="0 2.5 0"/>
+	</joint>
+	<joint name="Panther_docking_port_y_negative_joint" type="fixed">
+		<parent link="Panther_base_link"/>
+		<child link="Panther_docking_port_y_negative"/>
+		<origin rpy="0 0 -1.5708" xyz="0 -2.5 0"/>
+	</joint>
+<joint name="eagle_tiger_joint" type="fixed">
+  <parent link="Eagle_docking_port_y_positive"/>
+  <child link="Tiger_base_link"/>
+<origin xyz="4.0 0 0" rpy="0 0 0"/>
+</joint>
+<joint name="eagle_panther_joint" type="fixed">
+  <parent link="Eagle_docking_port_y_negative"/>
+  <child link="Panther_base_link"/>
+<origin xyz="4.0 0 0" rpy="0 0 0"/>
+</joint>
+</robot>
