@@ -3,7 +3,7 @@
 ## Purpose of this demo
 - To show an example of how to organize space station modules to create your space station model in the SDF format 
 - To demo to convert from SDF to URDF for ROS 2 use.
-- 
+
 ## File organization
 
 ```plaintext
