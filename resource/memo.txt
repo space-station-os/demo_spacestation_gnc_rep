@@ -1,0 +1,1 @@
+The file resource/demo_spacestation_gnc_rep must exist for ROS2 to register the package with ament_index_register.

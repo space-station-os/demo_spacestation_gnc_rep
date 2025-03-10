@@ -1,0 +1,3 @@
+sdf_loader:
+  ros__parameters:
+    sdf_file: "sdf/spacestation.sdf"

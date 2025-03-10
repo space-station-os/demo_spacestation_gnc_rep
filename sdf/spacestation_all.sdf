@@ -1,0 +1,951 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="spacestation">
+    <joint name="eagle_tiger_joint" type="fixed">
+      <parent>Eagle::docking_port_y_positive</parent>
+      <child>Tiger::base_link</child>
+      <pose>4.5 0 0 0 0 0</pose>
+    </joint>
+    <joint name="eagle_panther_joint" type="fixed">
+      <parent>Eagle::docking_port_y_negative</parent>
+      <child>Panther::base_link</child>
+      <pose>4.5 0 0 0 0 0 </pose>
+    </joint>
+  <link name="Eagle::base_link">
+      <inertial>
+        <mass>12000.0</mass>
+        <inertia>
+          <ixx>1200.0</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>300.0</iyy>
+          <iyz>0.0</iyz>
+          <izz>300.0</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose>0 0 0 0 1.5708 0</pose> 
+         
+        <geometry>
+          <cylinder>
+            <radius>2.5</radius>
+            <length>12.0</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>2.5</radius>
+            <length>12.0</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+
+    
+    <link name="Eagle::thruster_x_positive_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Eagle::thruster_x_positive_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Eagle::thruster_x_negative_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Eagle::thruster_x_negative_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Eagle::thruster_y_positive_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Eagle::thruster_y_positive_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Eagle::thruster_y_negative_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Eagle::thruster_y_negative_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Eagle::thruster_z_positive_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Eagle::thruster_z_positive_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Eagle::thruster_z_negative_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Eagle::thruster_z_negative_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+
+    
+    <joint name="Eagle::thruster_x_positive_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Eagle::thruster_x_positive_1</child>
+      <pose>-5.7 2.7 0.0 0.0 0.0 0.0</pose>
+    </joint>
+    <joint name="Eagle::thruster_x_positive_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Eagle::thruster_x_positive_2</child>
+      <pose>-5.7 -2.7 0.0 0.0 0.0 0.0</pose>
+    </joint>
+    <joint name="Eagle::thruster_x_negative_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Eagle::thruster_x_negative_1</child>
+      <pose>5.7 2.7 0.0 0.0 0.0 3.1459</pose>
+    </joint>
+    <joint name="Eagle::thruster_x_negative_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Eagle::thruster_x_negative_2</child>
+      <pose>5.7 -2.7 0.0 0.0 0.0 3.1459</pose>
+    </joint>
+    <joint name="Eagle::thruster_y_positive_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Eagle::thruster_y_positive_1</child>
+      <pose>0.0 0.3 2.6 0.0 0.0 1.5708</pose>
+    </joint>
+    <joint name="Eagle::thruster_y_positive_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Eagle::thruster_y_positive_2</child>
+      <pose>0.0 -0.3 2.6 0.0 0.0 1.5708</pose>
+    </joint>
+    <joint name="Eagle::thruster_y_negative_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Eagle::thruster_y_negative_1</child>
+      <pose>0.0 0.3 -2.6 0.0 0.0 -1.5708</pose>
+    </joint>
+    <joint name="Eagle::thruster_y_negative_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Eagle::thruster_y_negative_2</child>
+      <pose>0.0 -0.3 -2.6 0.0 0.0 -1.5708</pose>
+    </joint>
+    <joint name="Eagle::thruster_z_positive_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Eagle::thruster_z_positive_1</child>
+      <pose>5.8 0.0 2.7 0.0 1.5708 0.0</pose>
+    </joint>
+    <joint name="Eagle::thruster_z_positive_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Eagle::thruster_z_positive_2</child>
+      <pose>-5.8 0.0 2.7 0.0 1.5708 0.0</pose>
+    </joint>
+    <joint name="Eagle::thruster_z_negative_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Eagle::thruster_z_negative_1</child>
+      <pose>5.8 0.0 -2.7 0.0 -1.5708 0.0</pose>
+    </joint>
+    <joint name="Eagle::thruster_z_negative_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Eagle::thruster_z_negative_2</child>
+      <pose>-5.8 0.0 -2.7 0.0 -1.5708 0.0</pose>
+    </joint>
+
+    
+    <actuator>
+      <thruster>
+        <force>30.0</force>
+      </thruster>
+    </actuator>
+
+    
+    <link name="Eagle::docking_port_x_positive">
+      <collision name="collision_docking_port_x_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual_docking_port_x_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <link name="Eagle::docking_port_y_positive">
+      <collision name="collision_docking_port_y_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual_docking_port_y_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <link name="Eagle::docking_port_y_negative">
+      <collision name="collision_docking_port_y_negative">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual_docking_port_y_negative">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="Eagle::docking_port_x_positive_joint" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Eagle::docking_port_x_positive</child>
+      <pose>6.5 0.0 0.0 0.0 0.0 0.0</pose>
+    </joint>
+    <joint name="Eagle::docking_port_y_positive_joint" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Eagle::docking_port_y_positive</child>
+      <pose>0.0 2.5 0.0 0.0 0.0 1.5708</pose>
+    </joint>
+    <joint name="Eagle::docking_port_y_negative_joint" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Eagle::docking_port_y_negative</child>
+      <pose>0.0 -2.5 0.0 0.0 0.0 -1.5708</pose>
+    </joint>
+  <link name="Tiger::base_link">
+      <inertial>
+        <mass>8000.0</mass>
+        <inertia>
+          <ixx>800.0</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>300.0</iyy>
+          <iyz>0.0</iyz>
+          <izz>300.0</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose>0 0 0 0 1.5708 0</pose> 
+         
+        <geometry>
+          <cylinder>
+            <radius>2.5</radius>
+            <length>8.0</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>2.5</radius>
+            <length>8.0</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+
+    
+    <link name="Tiger::thruster_x_positive_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Tiger::thruster_x_positive_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Tiger::thruster_x_negative_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Tiger::thruster_x_negative_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Tiger::thruster_y_positive_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Tiger::thruster_y_positive_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Tiger::thruster_y_negative_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Tiger::thruster_y_negative_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Tiger::thruster_z_positive_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Tiger::thruster_z_positive_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Tiger::thruster_z_negative_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Tiger::thruster_z_negative_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+
+    
+    <joint name="Tiger::thruster_x_positive_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Tiger::thruster_x_positive_1</child>
+      <pose>-2.5999864091235776 3.2999904496916925 0.0 0.0 0.0 1.5708</pose>
+    </joint>
+    <joint name="Tiger::thruster_x_positive_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Tiger::thruster_x_positive_2</child>
+      <pose>2.600013590841342 3.30000955035823 0.0 0.0 0.0 1.5708</pose>
+    </joint>
+    <joint name="Tiger::thruster_x_negative_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Tiger::thruster_x_negative_1</child>
+      <pose>-2.600013590841342 10.69999044964177 0.0 0.0 0.0 4.7167</pose>
+    </joint>
+    <joint name="Tiger::thruster_x_negative_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Tiger::thruster_x_negative_2</child>
+      <pose>2.5999864091235776 10.700009550308307 0.0 0.0 0.0 4.7167</pose>
+    </joint>
+    <joint name="Tiger::thruster_y_positive_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Tiger::thruster_y_positive_1</child>
+      <pose>-0.2999999999979761 6.999998898038469 2.6 0.0 0.0 3.1416</pose>
+    </joint>
+    <joint name="Tiger::thruster_y_positive_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Tiger::thruster_y_positive_2</child>
+      <pose>0.2999999999979761 7.000001101961531 2.6 0.0 0.0 3.1416</pose>
+    </joint>
+    <joint name="Tiger::thruster_y_negative_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Tiger::thruster_y_negative_1</child>
+      <pose>-0.2999999999979761 6.999998898038469 -2.6 0.0 0.0 0.0</pose>
+    </joint>
+    <joint name="Tiger::thruster_y_negative_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Tiger::thruster_y_negative_2</child>
+      <pose>0.2999999999979761 7.000001101961531 -2.6 0.0 0.0 0.0</pose>
+    </joint>
+    <joint name="Tiger::thruster_z_positive_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Tiger::thruster_z_positive_1</child>
+      <pose>-1.395817939271698e-05 10.799999999974364 2.7 0.0 1.5708 1.5708</pose>
+    </joint>
+    <joint name="Tiger::thruster_z_positive_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Tiger::thruster_z_positive_2</child>
+      <pose>1.395817939271698e-05 3.200000000025636 2.7 0.0 1.5708 1.5708</pose>
+    </joint>
+    <joint name="Tiger::thruster_z_negative_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Tiger::thruster_z_negative_1</child>
+      <pose>-1.395817939271698e-05 10.799999999974364 -2.7 0.0 -1.5708 1.5708</pose>
+    </joint>
+    <joint name="Tiger::thruster_z_negative_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Tiger::thruster_z_negative_2</child>
+      <pose>1.395817939271698e-05 3.200000000025636 -2.7 0.0 -1.5708 1.5708</pose>
+    </joint>
+
+    
+    <actuator>
+      <thruster>
+        <force>30.0</force>
+      </thruster>
+    </actuator>
+
+    
+    <link name="Tiger::docking_port_x_positive">
+      <collision name="collision_docking_port_x_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual_docking_port_x_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <link name="Tiger::docking_port_y_positive">
+      <collision name="collision_docking_port_y_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual_docking_port_y_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <link name="Tiger::docking_port_y_negative">
+      <collision name="collision_docking_port_y_negative">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual_docking_port_y_negative">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="Tiger::docking_port_x_positive_joint" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Tiger::docking_port_x_positive</child>
+      <pose>-1.6529422965059584e-05 11.499999999969642 0.0 0.0 0.0 1.5708</pose>
+    </joint>
+    <joint name="Tiger::docking_port_y_positive_joint" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Tiger::docking_port_y_positive</child>
+      <pose>-2.4999999999831344 6.999990816987242 0.0 0.0 0.0 3.1416</pose>
+    </joint>
+    <joint name="Tiger::docking_port_y_negative_joint" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Tiger::docking_port_y_negative</child>
+      <pose>2.4999999999831344 7.000009183012758 0.0 0.0 0.0 0.0</pose>
+    </joint>
+  <link name="Panther::base_link">
+      <inertial>
+        <mass>8000.0</mass>
+        <inertia>
+          <ixx>800.0</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>300.0</iyy>
+          <iyz>0.0</iyz>
+          <izz>300.0</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose>0 0 0 0 1.5708 0</pose> 
+         
+        <geometry>
+          <cylinder>
+            <radius>2.5</radius>
+            <length>8.0</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>2.5</radius>
+            <length>8.0</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+
+    
+    <link name="Panther::thruster_x_positive_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Panther::thruster_x_positive_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Panther::thruster_x_negative_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Panther::thruster_x_negative_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Panther::thruster_y_positive_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Panther::thruster_y_positive_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Panther::thruster_y_negative_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Panther::thruster_y_negative_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Panther::thruster_z_positive_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Panther::thruster_z_positive_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Panther::thruster_z_negative_1">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+    <link name="Panther::thruster_z_negative_2">
+      <visual name="visual">
+        <pose>0 0 0 0 1.5708 0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </visual>      
+    </link>
+
+    
+    <joint name="Panther::thruster_x_positive_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Panther::thruster_x_positive_1</child>
+      <pose>2.600013590841342 -3.30000955035823 0.0 0.0 0.0 -1.5708</pose>
+    </joint>
+    <joint name="Panther::thruster_x_positive_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Panther::thruster_x_positive_2</child>
+      <pose>-2.5999864091235776 -3.2999904496916925 0.0 0.0 0.0 -1.5708</pose>
+    </joint>
+    <joint name="Panther::thruster_x_negative_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Panther::thruster_x_negative_1</child>
+      <pose>2.5999864091235776 -10.700009550308307 0.0 0.0 0.0 1.5751000000000002</pose>
+    </joint>
+    <joint name="Panther::thruster_x_negative_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Panther::thruster_x_negative_2</child>
+      <pose>-2.600013590841342 -10.69999044964177 0.0 0.0 0.0 1.5751000000000002</pose>
+    </joint>
+    <joint name="Panther::thruster_y_positive_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Panther::thruster_y_positive_1</child>
+      <pose>0.2999999999979761 -7.000001101961531 2.6 0.0 0.0 0.0</pose>
+    </joint>
+    <joint name="Panther::thruster_y_positive_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Panther::thruster_y_positive_2</child>
+      <pose>-0.2999999999979761 -6.999998898038469 2.6 0.0 0.0 0.0</pose>
+    </joint>
+    <joint name="Panther::thruster_y_negative_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Panther::thruster_y_negative_1</child>
+      <pose>0.2999999999979761 -7.000001101961531 -2.6 0.0 0.0 -3.1416</pose>
+    </joint>
+    <joint name="Panther::thruster_y_negative_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Panther::thruster_y_negative_2</child>
+      <pose>-0.2999999999979761 -6.999998898038469 -2.6 0.0 0.0 -3.1416</pose>
+    </joint>
+    <joint name="Panther::thruster_z_positive_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Panther::thruster_z_positive_1</child>
+      <pose>-1.395817939271698e-05 -10.799999999974364 2.7 0.0 1.5708 -1.5708</pose>
+    </joint>
+    <joint name="Panther::thruster_z_positive_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Panther::thruster_z_positive_2</child>
+      <pose>1.395817939271698e-05 -3.200000000025636 2.7 0.0 1.5708 -1.5708</pose>
+    </joint>
+    <joint name="Panther::thruster_z_negative_joint_1" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Panther::thruster_z_negative_1</child>
+      <pose>-1.395817939271698e-05 -10.799999999974364 -2.7 0.0 -1.5708 -1.5708</pose>
+    </joint>
+    <joint name="Panther::thruster_z_negative_joint_2" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Panther::thruster_z_negative_2</child>
+      <pose>1.395817939271698e-05 -3.200000000025636 -2.7 0.0 -1.5708 -1.5708</pose>
+    </joint>
+
+    
+    <actuator>
+      <thruster>
+        <force>30.0</force>
+      </thruster>
+    </actuator>
+
+    
+    <link name="Panther::docking_port_x_positive">
+      <collision name="collision_docking_port_x_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual_docking_port_x_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <link name="Panther::docking_port_y_positive">
+      <collision name="collision_docking_port_y_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual_docking_port_y_positive">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <link name="Panther::docking_port_y_negative">
+      <collision name="collision_docking_port_y_negative">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual_docking_port_y_negative">
+        <pose>0 0 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>1.5</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="Panther::docking_port_x_positive_joint" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Panther::docking_port_x_positive</child>
+      <pose>-1.6529422965059584e-05 -11.499999999969642 0.0 0.0 0.0 -1.5708</pose>
+    </joint>
+    <joint name="Panther::docking_port_y_positive_joint" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Panther::docking_port_y_positive</child>
+      <pose>2.4999999999831344 -7.000009183012758 0.0 0.0 0.0 0.0</pose>
+    </joint>
+    <joint name="Panther::docking_port_y_negative_joint" type="fixed">
+      <parent>Eagle::base_link</parent>
+      <child>Panther::docking_port_y_negative</child>
+      <pose>-2.4999999999831344 -6.999990816987242 0.0 0.0 0.0 -3.1416</pose>
+    </joint>
+  </model>
+</sdf>

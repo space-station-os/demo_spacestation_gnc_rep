@@ -25,12 +25,12 @@
     <joint name="eagle_tiger_joint" type="fixed">
       <parent>Eagle::docking_port_y_positive</parent>
       <child>Tiger::base_link</child>
-      <pose>4.0 0 0 0 0 0</pose>
+      <pose>4.5 0 0 0 0 0</pose>
     </joint>
     <joint name="eagle_panther_joint" type="fixed">
       <parent>Eagle::docking_port_y_negative</parent>
       <child>Panther::base_link</child>
-      <pose>4.0 0 0 0 0 0</pose>
+      <pose>4.5 0 0 0 0 0 </pose>
     </joint>
   </model>
 </sdf>
